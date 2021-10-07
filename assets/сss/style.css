@@ -62,7 +62,7 @@ body{
 .loginButton::before{
     content: url('../img/user.svg');
     position: absolute;
-    top: 10px;
+    top: 12px;
     left: 10px;
 }
 
@@ -76,13 +76,14 @@ body{
     height:40px;
     padding-left:20px;
     background-color: white;
+    border:none;
 }
 
 .cartButton::before {
     content: url('../img/shopping-cart.png');
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 12px;
+    left: 5px;
 }
 
 /* 2.2 */
@@ -122,4 +123,125 @@ body{
     width: 900px;
     height: inherit;
     background-position-x:700px;
+}
+
+
+
+.restaurantContent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.restaurantContent .restaurantCard:nth-child(1){
+    margin-right: 1rem;
+}
+
+.restaurantContent .restaurantCard + .restaurantCard{
+    margin-right:1rem;
+}
+
+
+.restaurant .title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.restaurant .title input{
+    height:34px;
+    width: 306px;
+    padding: 0px 2rem 0px 2rem;
+}
+
+
+.restaurant .title .restaurantSearch{
+    position: relative;
+}
+
+.restaurant .title .restaurantSearch input{
+    border: 1px solid #edebeb;
+}
+
+.restaurant .title .restaurantSearch::before{
+    content: url('../img/search.png');
+    position: absolute;
+    top:10px;
+    left:10px;
+}
+
+#contentWrap{
+    margin-top:2rem;
+}
+
+.restaurant .title p{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.restaurant .restaurantContent .restaurantCard{
+    width: 384px;
+    height: 380px;
+    margin-bottom: 2rem;
+    box-shadow: 0px 2px 7px 0px rgb(0 0 0 / 30%);
+    border-radius: 0.35rem;
+    overflow: hidden;
+}
+
+.restaurant .restaurantContent .restaurantCard .cardImg{
+    height:250px;
+}
+
+.restaurant .restaurantContent .restaurantCard .cardImg img{
+    height: inherit;
+    width: 384px;
+}
+
+.cardInfo{
+    padding: 1rem 2rem 1rem 2rem;
+    border-radius: 0.35rem;
+}
+
+.cardInfo .name{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cardInfo .name p{
+    font-size: 24px;
+    font-weight: bold;
+} 
+
+.cardInfo .name .time{
+    background-color: black;
+    color: white;
+    width: 55px;
+    height: 20px;
+    padding: 2.5px 7px 2.5px 7px;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardBottomInfo{
+    display: flex;  
+}
+
+.cardBottomInfo img{
+    width: 14px;
+    height: 14px;
+}
+
+.cardBottomInfo p{
+    margin: 0px 0px 0px 10px;
+}
+
+.cardBottomInfo .rating{
+    color: #ffc107;
+    font-weight: bold;
+}
+
+.cardBottomInfo .price{
+    color: grey
 }
