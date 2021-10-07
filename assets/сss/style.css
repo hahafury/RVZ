@@ -4,14 +4,17 @@
 }
 
 body{
-    width: 1200px;
     margin: 0 auto;
+    background-color: #f8f8f8;
 }
 
 #header{
     display: flex;
     justify-content: space-between;
     margin-top:2rem;
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 2rem;
 }
 
 #header input,button{
@@ -89,7 +92,8 @@ body{
 /* 2.2 */
 
 #promo{
-    width: 100%;
+    width: 1200px;
+    margin: 0 auto;
     background: url('../img/promoBg.png');
     height: 300px;
     border: 1px solid black;
@@ -125,7 +129,10 @@ body{
     background-position-x:700px;
 }
 
-
+#contentWrap{
+    width: 1200px;
+    margin: 0 auto;
+}
 
 .restaurantContent{
     display: flex;
@@ -200,6 +207,7 @@ body{
 .cardInfo{
     padding: 1rem 2rem 1rem 2rem;
     border-radius: 0.35rem;
+    background-color: white;
 }
 
 .cardInfo .name{
@@ -244,4 +252,161 @@ body{
 
 .cardBottomInfo .price{
     color: grey
+}
+
+/* 2.3 */
+
+#footer{
+    background-color: white;
+    display: flex;
+    width: 100vw;
+    margin: 0 auto;
+}
+
+.footerWrapper{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 0rem 4rem 0rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footerNav{
+    display: flex;
+    align-items: center;
+}
+
+a{
+    margin-left: 2rem;
+    text-decoration: none;
+    color: black;
+}
+
+.footerNav a + a{
+    margin-left:1rem;
+}
+
+.footerSoc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerSoc img{
+    margin-right: 2rem
+}
+
+.item_title{
+    justify-content: flex-start !important;
+    align-items: center;
+    font-size: 24px!important;
+}
+
+.item_title p{
+    font-size: 20px!important;
+}
+
+.item_title * + *{
+    margin-left: 1rem!important;
+}
+
+
+.item_title p.item_name{
+    font-size: 34px!important;
+}
+
+.item_title img{
+    width: 14px;
+    height: 14px;
+}
+
+.item_card .cardBottomInfo p{
+    margin: 0;
+}
+
+.item_card .cardBottomInfo{
+    display:flex;
+    flex-direction: column;
+}
+.item_card .restaurantCard{
+    height: auto!important;
+}
+
+.buyContainer{
+    display: flex;
+    align-items: center;
+}
+
+.buyContainer * + * {
+    margin-left: 1rem!important;
+}
+
+.buyContainer p{
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.item_card button{
+    width: 124px;
+    height: 40px;
+    position: relative;
+    background-color: rgb(131, 131, 199);
+    color:white;
+    margin-top: 1rem;
+}
+
+.item_card button::after{
+    content: url('../img/shopping-cart.png');
+    position: absolute;
+    right: 10px;
+}
+@media only screen and (max-width: 1024px){
+    .restaurantContent{
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+    #promo{
+        width: 90%;
+    }
+    #contentWrap{
+        width: 90%;
+    }
+    #header{
+        width: 90%;
+    }
+    #footer{
+        width: 100%;
+    }
+    #contentWrap .restaurant .title{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #contentWrap .restaurant .title input{
+        margin-bottom: 2rem;
+    }
+    
+    #promoImage{
+        display: none;
+    }
+    #promoInfo{
+        padding-left: 2rem;
+    }
+    #header{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #header .search{
+        width: 80%;
+        margin: 1rem 0rem 1rem 0rem
+    }
+    #header .search input{
+        width: inherit;
+
+    }
 }
