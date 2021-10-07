@@ -1,7 +1,15 @@
+*{
+    font-family: 'Roboto',
+    sans-serif;
+}
+
+body{
+    width: 1200px;
+    margin: 0 auto;
+}
+
 #header{
     display: flex;
-    width:1200px;
-    margin: 0 auto;
     justify-content: space-between;
     margin-top:2rem;
 }
@@ -75,4 +83,43 @@
     position: absolute;
     top: 10px;
     left: 10px;
+}
+
+/* 2.2 */
+
+#promo{
+    width: 100%;
+    background: url('../img/promoBg.png');
+    height: 300px;
+    border: 1px solid black;
+    border-radius: 6px;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 10px 7px 0px rgba(0, 0, 0, 0.3);
+}
+
+#promoInfo{
+    width: 538px;
+    padding-left:5rem;
+}
+
+#promoInfo p{
+    margin-bottom: 1rem;
+}
+
+.promoHead{
+    font-size: 39px;
+    font-weight: bold;
+}
+
+.promoSub{
+    font-size: 24px;
+}
+
+#promoImage{
+    background: url('../img/promoImage.png');
+    width: 900px;
+    height: inherit;
+    background-position-x:700px;
 }
