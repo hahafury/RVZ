@@ -1,0 +1,78 @@
+#header{
+    display: flex;
+    width:1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+    margin-top:2rem;
+}
+
+#header input,button{
+    border-radius: 2px;
+}
+
+#headerButtons{
+    display: flex;
+}
+
+#headerButtons div + div{
+    margin-left: 10px;
+}
+
+.logo{
+    background: url('../img/logo.png');
+    width:100px;
+    height:36px;
+}
+
+.search{
+    position: relative;
+}
+
+.search input{
+    width: 690px;
+    height: 40px;
+    padding: 0px 2rem 0px 2rem;
+    border: 1px solid #edebeb;
+}
+
+.search::before{
+    content: url('../img/home.svg');
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.loginButton{
+    width: 96px;
+    height:40px;
+    position: relative;
+    background-color: #1890FF;
+    color: white;
+    border: none;
+}
+
+.loginButton::before{
+    content: url('../img/user.svg');
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.cart{
+    position: relative;
+    border: 1px solid #edebeb;
+}
+
+.cartButton{
+    width: 96px;
+    height:40px;
+    padding-left:20px;
+    background-color: white;
+}
+
+.cartButton::before {
+    content: url('../img/shopping-cart.png');
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
