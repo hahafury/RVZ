@@ -6,6 +6,7 @@
 body{
     margin: 0 auto;
     background-color: #f8f8f8;
+    overflow-x: hidden;
 }
 
 #header{
@@ -60,6 +61,10 @@ body{
     background-color: #1890FF;
     color: white;
     border: none;
+}
+
+.loginButton:hover{
+    cursor:pointer;
 }
 
 .loginButton::before{
@@ -409,4 +414,67 @@ a{
         width: inherit;
 
     }
+}
+
+/* 4.1 */
+
+.overlay::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5)
+}
+
+.closeAuth{
+    position: absolute;
+    top:1rem;
+    right:1rem;
+    background-color: white;
+    border: none;
+    font-size: 1.3rem;
+}
+
+.closeAuth:hover{
+    cursor: pointer;
+}
+
+#auth{
+    height: 200px;
+    display: none;
+    width: 300px;
+    padding: 3rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 0.35rem;
+    position: fixed;
+    top:30%;
+    right:30%;
+}
+
+.isOpened {
+    display: flex!important;
+    z-index: 99;
+}
+
+#auth form{
+   display: flex;
+   flex-direction: column;
+}
+
+#auth form * + *{
+    margin-top:2rem;
+}
+
+#auth form .loginButton{
+    align-self: center;
+}
+
+.username{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
