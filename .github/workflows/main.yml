@@ -20,9 +20,5 @@ jobs:
     steps:
       - uses: actions/checkout@v3.5.3
       - uses: actions/setup-node@v3.7.0
-        with:
-          node-version: "16"
-          cache: "npm"
-          cache-dependency-path: package-lock.json
       - run: checkly test
       - run: checkly deploy
