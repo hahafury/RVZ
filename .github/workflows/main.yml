@@ -11,7 +11,7 @@ env:
   CHECKLY_API_KEY: ${{ secrets.E2E_CHECKLY_API_KEY }}
 
 jobs:
-  test:
+  test-e2e:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest]
@@ -22,7 +22,5 @@ jobs:
       - uses: actions/setup-node@v3.7.0
         with:
           node-version: "16"
-          cache: "npm"
-          cache-dependency-path: package-lock.json
       - run: checkly test
       - run: checkly deploy
