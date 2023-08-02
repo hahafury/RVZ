@@ -1,0 +1,28 @@
+name: test
+
+on:
+  pull_request:
+    branches:
+      - main
+
+env:
+  CHECKLY_ACCOUNT_NAME: ${{ secrets.E2E_CHECKLY_ACCOUNT_NAME }}
+  CHECKLY_ACCOUNT_ID: ${{ secrets.E2E_CHECKLY_ACCOUNT_ID }}
+  CHECKLY_API_KEY: ${{ secrets.E2E_CHECKLY_API_KEY }}
+
+jobs:
+  test:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    name: test - ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+          cache: "npm"
+          cache-dependency-path: package-lock.json
+      - run: checkly test
+      - run: checkly deploy
